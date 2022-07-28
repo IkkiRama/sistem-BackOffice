@@ -14,13 +14,16 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::group(["middleware" => "auth"], function(){
 	Route::get('/', [DashboardController::class, 'index']);
-	Route::resource('user', UserController::class);
-	Route::post('/user/import', [UserController::class, 'import']);
+	Route::get('/deleteAll', [DashboardController::class, 'deleteAll']);
+	
 	Route::resource('group', GroupController::class);
+	Route::resource('user', UserController::class);
+	
 	Route::get('/getUser', [UserController::class, 'getUser']);
 	Route::post('/getUser', [UserController::class, 'getApiUser']);
 	Route::post('/user/import', [UserController::class, 'import']);
-	Route::post('/group/import', [GroupController::class, 'import']);
+	Route::post('/user/import', [UserController::class, 'import']);
+
 });
 
 

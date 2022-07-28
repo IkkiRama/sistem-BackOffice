@@ -123,7 +123,7 @@ class UserController extends Controller
 
     public function import(Request $request)
     {
-        Excel::import(new UserImport, $request->data_user);
-        // dd($request);
+        Excel::queueImport(new UserImport, $request->data_user);
     }
+
 }

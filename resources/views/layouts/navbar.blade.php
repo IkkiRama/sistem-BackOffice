@@ -10,6 +10,7 @@
         @if(auth()->user()->role === "admin")
         <a class="nav-link" href="{{ url('/user') }}">User</a>
         <a class="nav-link" href="{{ url('/group') }}">Group</a>
+        <a class="nav-link" href="{{ url('/deleteAll') }}" onclick="return confirm('Yakin Anda mau mengghapus semua data?')">Delete All</a>
         @endif
         <a class="nav-link" href="{{ url('/getUser') }}">Get User</a>
         @if(auth()->user())

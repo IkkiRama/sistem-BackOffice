@@ -14,7 +14,6 @@
 	<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 		Import Data
 	</button>
-	<a href="{{url("/user/delteAll")}}" class="btn btn-danger my-4">Hapus Semua</a>
 
 
 	<table id="User" class="display">
